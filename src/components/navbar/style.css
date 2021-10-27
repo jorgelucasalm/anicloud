@@ -1,0 +1,30 @@
+nav {
+  width: 100%;
+  font-size: 1.2rem;
+  background: #093D4E;
+  color: #fff;
+  box-shadow: 2px 2px 2px #00000020;
+  font-family: 'Acme';
+}
+
+nav div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.navbar-title {
+  font-size: 2rem;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+}
+
+.navbar-list li {
+  margin: 0 2rem;
+}

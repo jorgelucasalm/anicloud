@@ -1,13 +1,11 @@
 import './App.css';
 import Navbar from '../components/navbar';
 import List from './List';
+import Routes from '../router';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <List/>
-    </div>
+    <Routes />
   );
 }
 

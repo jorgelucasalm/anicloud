@@ -1,11 +1,15 @@
-import './style.css'
+import Navbar from "../../components/navbar";
+import "./style.css";
 
 const List = () => {
   return (
-    <div className="list">
-      <h1>Olá</h1>
-    </div>
-  )
-}
+    <>
+      <Navbar />
+      <div className="list">
+        <h1>Olá</h1>
+      </div>
+    </>
+  );
+};
 
 export default List;

@@ -1,0 +1,39 @@
+.card {
+  cursor: pointer;
+  width: 20%;
+  padding: 0rem .8rem 3rem .8rem;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card img{
+}
+
+@media(max-width: 1200px){
+  .card{
+    width: 25%;
+  }
+}
+
+
+@media(max-width: 900px){
+  .card{
+    width: 33%;
+  }
+}
+
+
+@media(max-width: 700px){
+  .card{
+    width: 50%;
+  }
+}
+
+
+@media(max-width: 500px){
+  .card{
+    width: 100%;
+  }
+}

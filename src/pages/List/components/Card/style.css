@@ -1,14 +1,17 @@
 .card {
-  cursor: pointer;
   width: 20%;
   padding: 0rem .8rem 3rem .8rem;
 }
 
 .card img {
   width: 100%;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
 }
 
-.card img{
+.card h2{
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
 @media(max-width: 1200px){
@@ -16,7 +19,6 @@
     width: 25%;
   }
 }
-
 
 @media(max-width: 900px){
   .card{

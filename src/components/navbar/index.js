@@ -7,8 +7,8 @@ const Navbar = () => {
       <div>
         <span className="navbar-title"><Link to="/">Listagem de filmes</Link></span>
         <ul className="navbar-list">
-          <li><Link to="/">Animes</Link></li>
-          <li><Link to="/">Mangás</Link></li>
+          <li><Link to="/animes">Animes</Link></li>
+          <li><Link to="/mangas">Mangás</Link></li>
           <li><Link to="/">Notícias</Link></li>
         </ul>
         <span><Link to="/">Entrar</Link></span>

@@ -1,11 +1,11 @@
-import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import List from "./pages/List";
 
 const Routes = () => {
   return (
     <Router>
-      <Route component={List} path="/" exact />
-      <Route component={List} path="/listagem" />
+      <Route path="/animes" exact render= {() => <List screen="animes"/>} />
+      <Route path="/mangas" exact render= {() => <List screen="mangas"/>} />
     </Router>
   );
 };

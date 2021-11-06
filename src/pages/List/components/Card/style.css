@@ -14,6 +14,31 @@
   cursor: pointer;
 }
 
+.card-status {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-status span {
+  padding: .2rem .8rem;
+  margin-top: .8rem;
+  margin-right: .5rem;
+  border-radius: 5px;
+}
+
+.genre{
+  background:#E75738;
+}
+
+.date {
+  background-color: #428A29;
+}
+
+.status {
+  background-color: #957191;
+}
+
 @media(max-width: 1200px){
   .card{
     width: 25%;

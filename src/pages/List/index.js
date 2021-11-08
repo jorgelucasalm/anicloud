@@ -5,11 +5,10 @@ import api from "../../services/api";
 import { useEffect, useState } from "react";
 
 const List = (props) => {
-  const [animes, setAnimes] = useState([]);
-  const [manga, setManga] = useState([]);
+  const [screen, setScreen] = useState([]);
 
   useEffect(() => {
-    api.get("/anime").then((response) => {
+    api.get("/" + props.screen).then((response) => {
       const res = response.data.data;
       let scopeFilter = [];
 
@@ -23,45 +22,25 @@ const List = (props) => {
             anime.attributes.status === "finished"
               ? "Concluído"
               : "Em Andamento",
-          date: anime.attributes.startDate.substr(0, 4),
+          date:
+            anime.attributes.startDate !== null
+              ? anime.attributes.startDate.substr(0, 4)
+              : "NaN",
         });
       });
 
-      setAnimes(scopeFilter);
-
+      setScreen(scopeFilter);
       return;
     });
   }, []);
 
-  useEffect(() => {
-    api.get("/manga").then((response) => {
-      const res = response.data.data;
-      let scopeFilter = [];
-
-      res.map((manga) => {
-        scopeFilter.push({
-          id: manga.id,
-          name: manga.attributes.titles.en,
-          nameAlternative: manga.attributes.titles.en_jp,
-          image: manga.attributes.posterImage.small,
-          status:
-            manga.attributes.status === "finished"
-              ? "Concluído"
-              : "Em Andamento",
-          date: manga.attributes.startDate !== null ? manga.attributes.startDate.substr(0, 4) : 'NaN',
-        });
-      });
-
-      setManga(scopeFilter);
-
-      return;
-    });
-  }, []);
   return (
     <>
       <Navbar />
       <div className="list">
-        {manga.map((anime) => {return <Card key={anime.id} {...anime} />;})}
+        {screen.map((anime) => {
+          return <Card key={anime.id} {...anime} screen={props.screen} />;
+        })}
       </div>
     </>
   );

@@ -10,8 +10,6 @@ const Main = styled.main`
     margin-left: 10vw;
     margin-top: 8vh;
     border-radius: 15px;
-    
-    
 `;
 
 export default Main;

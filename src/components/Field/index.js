@@ -4,10 +4,10 @@ import Label from './Label';
 import Input from './Input';
 import Content from './Content';
 
-const Text = ({label, type, name, register})=>(
+const Text = ({label, type, name, register, placeholder})=>(
 <Label>
     <Content>{label}</Content>
-    <Input type={type} name={name} register={register}></Input>
+    <Input placeholder={placeholder} type={type} name={name} register={register}></Input>
 </Label>
 );
 

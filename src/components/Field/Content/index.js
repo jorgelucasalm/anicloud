@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
-const Content = styled.span`
-margin-bottom: 8px;
+const Content = styled.div`
+margin-bottom: 60px;
+margin-top: -55px;
 `;
 
 export default Content;

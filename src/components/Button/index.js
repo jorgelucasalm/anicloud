@@ -8,7 +8,8 @@ width: 100%;
 font-size: 25px;
 padding: 10px 20px;
 color: #fff;
-cursor: pointer;
+cursor: pointer; 
+margin-top: 10px;
 `;
 
 export default Button;

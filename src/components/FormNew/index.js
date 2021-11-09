@@ -1,32 +1,43 @@
 import React from "react";
 import Field from '../Field';
 import Form from '../Form';
-import {useForm} from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import Button from "../Button";
 import { yupResolver } from "@hookform/resolvers/yup";
 import schema from "./Validation";
+import img2 from "./anime.png";
+import Div from "./style";
 
 const FormNew = () => {
-    
-    const{register, handleSubmit, formState:{ errors } } = useForm({
+
+    const { register, handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(schema)
-    });
+    })
 
+    const onSubmit = (user) => {
+        console.log(user)
+        alert("Login Feito com Sucesso!")
 
-const newUser = (user) => {
-    console.log(user);
-};
+    }
+   
+    return (
+        <Div>
+            <img src={img2} alt="" />
+            <Form onSubmit={handleSubmit(onSubmit)}>
+                <Field.Text placeholder="Email" label="Iniciar Sessão" name="email" type="email" {...register('email')} />
+                <span>{errors.email?.message}</span>
+                <Field.Text placeholder="Senha" label="" name="password" type="password" {...register('password')} />
+                <span>{errors.password?.message}</span>
+                <Button type="submit">Login</Button>
+                
+                <a href="https://www.google.com.br/" className="link">Esqueceu a senha?</a> 
+                <br/><br/>
+                <a  href="https://www.google.com.br/" className="link">Cadastre-se</a>
+            </Form>
+        </Div>
 
-return(
-    <Form onSubmit={handleSubmit(newUser)}>
-        <Field.Text  placeholder="Email" label="Email" name="email" type="email" register={register}/>
-        {errors.email?.message}
-        <Field.Text placeholder="Senha" label="Senha" name="password" type="password" register={register}/>
-        {errors.password?.message}
-       <Button>Login</Button> 
-    </Form>
     );
-}; 
+}
 
 export default FormNew;
 

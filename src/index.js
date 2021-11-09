@@ -5,7 +5,6 @@ import Base from './components/styles/generic/elements/Base';
 import Reset from './components/styles/generic/Reset';
 
 
-
 ReactDOM.render(
   <React.StrictMode>
     <Reset/>

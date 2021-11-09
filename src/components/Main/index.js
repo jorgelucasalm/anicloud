@@ -5,11 +5,10 @@ const Main = styled.main`
     width: 80vw;
     height: 80vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10vw;
-    margin-top: 8vh;
+    justify-content: space-between;
+    align-items: center; 
     border-radius: 15px;
+    margin: 5rem auto;
 `;
 
 export default Main;

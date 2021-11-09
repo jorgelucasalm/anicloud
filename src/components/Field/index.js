@@ -1,5 +1,4 @@
 import React from 'react'
-
 import Label from './Label';
 import Input from './Input';
 import Content from './Content';

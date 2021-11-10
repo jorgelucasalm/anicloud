@@ -11,7 +11,7 @@ const Navbar = () => {
           <li><Link to="/mangas">Mangás</Link></li>
           <li><Link to="/noticias">Notícias</Link></li>
         </ul>
-        <span><Link to="/">Entrar</Link></span>
+        <span><Link to="/login">Entrar</Link></span>
       </div>
     </nav>
   );

@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const Main = styled.main`
     background-color: #FFFFFF;
+    color: #000;
     width: 80vw;
     height: 80vh;
     display: flex;

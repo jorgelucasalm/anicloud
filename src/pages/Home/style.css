@@ -1,0 +1,31 @@
+.home {
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.home-content{
+  padding: 2rem 1rem;
+  margin: 0 auto;
+  display: flex;
+  max-width: 1440px;
+}
+
+.home-content div{
+  width: 50%;
+}
+
+.home-content h1{
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
+.home .image-content {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+.home .image-content img{
+  width: 500px;
+  height: 300px;
+}

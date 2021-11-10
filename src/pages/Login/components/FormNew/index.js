@@ -37,7 +37,7 @@ const FormNew = () => {
                 <div style={{paddingTop: '45px', textAlign: 'center'}}>
                 <a href="x" onClick={esqueceuSenha} className="link">Esqueceu a senha?</a> 
                 <hr/>
-                <a  href="xx" className="link">Cadastre-se</a>
+                <a  href="x" className="link">Cadastre-se</a>
                 </div>
             </Form>
         </Div>

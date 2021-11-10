@@ -5,7 +5,7 @@ const Navbar = () => {
   return (
     <nav>
       <div>
-        <span className="navbar-title"><Link to="/">Listagem de filmes</Link></span>
+        <span className="navbar-title"><Link to="/">Animes/Manga</Link></span>
         <ul className="navbar-list">
           <li><Link to="/animes">Animes</Link></li>
           <li><Link to="/mangas">Mangás</Link></li>

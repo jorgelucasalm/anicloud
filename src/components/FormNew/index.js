@@ -11,9 +11,9 @@ import Div from "./style";
 const FormNew = () => {
 
     const { register, handleSubmit, formState: { errors } } = useForm()
-    // {
+    //     {
     //     resolver: yupResolver(schema)
-    // })
+    // });
 
     const onSubmit = data =>console.log(data);
         
@@ -25,9 +25,9 @@ const FormNew = () => {
         <Div>
             <img src={img2} alt="" />
             <Form onSubmit={handleSubmit(onSubmit)}>
-                <Field.Text placeholder="Email" label="Iniciar Sessão" name="email" type="email" register={register} />
+                <Field.Text placeholder="Email" label="Iniciar Sessão" name="email" type="email" register={register} {...register("email", { required: true })} defaultValue='teste@teste.com' />
                 <span>{errors.email?.message}</span>
-                <Field.Text placeholder="Senha" label="" name="password" type="password" register={register} />
+                <Field.Text placeholder="Senha" label="" name="password" type="password" register={register} {...register("password", { required: true })} defaultValue='123456' />
                 <span>{errors.password?.message}</span>
                 <Button type="submit" className='button1'>Login</Button>
                 

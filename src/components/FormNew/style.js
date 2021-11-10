@@ -4,6 +4,7 @@ const Div = styled.div`
 display: flex;
 width: 100%;
 justify-content: space-around;
+font-weight: bold;
 
 img{
     border-radius: 20px;

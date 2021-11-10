@@ -3,7 +3,7 @@ import Label from './Label';
 import Input from './Input';
 import Content from './Content';
 
-const Text = ({label, type, name, register, placeholder, })=>(
+const Text = ({label, type, name, register, placeholder})=>(
 <Label>
     <Content>{label}</Content>
     <Input placeholder={placeholder} type={type} name={name} ref={register}></Input>

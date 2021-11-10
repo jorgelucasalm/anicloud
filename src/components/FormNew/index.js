@@ -27,9 +27,9 @@ const FormNew = () => {
         <Div>
             <img src={img2} alt="" />
             <Form onSubmit={handleSubmit(onSubmit)}>
-                <Field.Text placeholder="Email" label="Iniciar Sessão" name="email" type="email" register={register} {...register("email")} defaultValue='teste@teste.com' />
+                <Field.Text placeholder="Email" label="Iniciar Sessão" name="email" type="email" register={register} {...register("email")} defaultValue='' />
                 <span>{errors.email?.message}</span>
-                <Field.Text placeholder="Senha" label="" name="password" type="password" register={register} {...register("password")} defaultValue='123456' />
+                <Field.Text placeholder="Senha" label="" name="password" type="password" register={register} {...register("password")} defaultValue='' />
                 <span>{errors.password?.message}</span>
                 
                 <Button type="submit" className='button1'>Login</Button>

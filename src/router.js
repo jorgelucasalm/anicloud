@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import List from "./pages/List";
 import Home from "./pages/Home";
+import New from "./pages/News/App";
 
 const Routes = () => {
   return (
@@ -8,6 +9,7 @@ const Routes = () => {
      <Route path="/" exact component={Home} />
       <Route path="/animes" exact render= {() => <List screen="anime"/>} />
       <Route path="/mangas" exact render= {() => <List screen="manga"/>} />
+      <Route path="/noticias" exact component={New} />
     </Router>
   );
 };

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+body {
+  background-color: #04465A;
+  display: grid;
+}
+
+.news section {
+  padding: 1rem;
+}
+
+.navBarProvissoria {
+  margin-top: 2rem;
+  top: auto;
+  max-width: 100%;
+}
+
+.news h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 32px;
+  color: #ffffff;
+}
+
+.news span {
+  color: #ffffff;
+}
+
+.news img {
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.news img:hover {
+  opacity: 0.8;
+}
+
+.news a {
+  text-decoration: none;
+}
+
+.mainArticleTitle:hover {
+  color: 	#C0C0C0;
+}
+
+.subArticleTitle:hover {
+  color: 	#C0C0C0;
+}
+
+.pageTitle  {
+  padding: 15px;
+  font-family: 'Acme', sans-serif;
+}
+
+.mainImage {
+  max-width: 38rem;
+  max-height: 25rem;
+  margin-bottom: 2rem;
+}
+
+.subImage {
+  max-width: 30em;
+  max-height: 10rem;
+}
+
+.mainArticle {
+  margin: 0.8rem;
+  width: 45%;
+  height: 78%;
+  display: flex;
+  position: absolute;
+  object-fit: contain;
+}
+
+.subArticles {
+  display: grid;
+  margin-top: 0.8rem;
+  width: 48rem;
+  height: 38.5rem;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+  float: right;
+  top: auto;
+  object-fit: fill;
+}
+
+
+.topLeftArticle {
+  align-content: stretch;
+  object-fit: contain;
+  height: 100%;
+  width: 95%;
+}
+
+.topRightArticle {
+  align-content: stretch;
+  object-fit: contain;
+  height: 100%;
+  width: 95%;
+}
+
+.bottomLeftArticle {
+  display: flex;
+  align-content: stretch;
+  object-fit: contain;
+  height: 100%;
+  width: 95%;
+  justify-content: center;
+}
+
+.bottomRightArticle {
+  align-content: stretch;
+  object-fit: contain;
+  height: 100%;
+  width: 95%;
+}
+
+.mainArticleTitle {
+  font-size: 48px;
+  line-height: 110%;
+  margin-bottom: 0.5rem;
+}
+
+.articleDescription {
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+}
+
+.subArticleTitle {
+  font-size: 24px;
+  line-height: 110%;
+  margin-bottom: 0.5rem;
+}
+
+.articleDescription {
+  color: #ffffff;
+  font-family: 'Calibri';
+}
+
+.articleAuthor {
+  color: #ffffff;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+.articleComments {
+  color: #D3D3D3;
+}
+
+.subDivisionLine {
+  width: 0.05rem;
+  height: 78%;
+  position: absolute;
+  align-self: center;
+  margin-right: 5.5rem;
+}
+
+.mainDivisionLine {
+  width: 0.05rem;
+  height: 78%;
+  position: absolute;
+  margin-left: 40.75rem;
+  margin-top: 0.8rem;
+}
+

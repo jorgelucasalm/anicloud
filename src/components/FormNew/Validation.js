@@ -6,5 +6,4 @@ const schema = yup.object().shape({
     password: yup.string().required("O Campo senha é obrigatório!").min(6, "Mínimo de 6 caracteres")
 });
 
-
 export default schema;

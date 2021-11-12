@@ -17,6 +17,7 @@ const FormNew = () => {
     const onSubmit = data => {
     console.log(data)
     alert("Login feito com Sucesso!");
+    document.location.reload(true);
 }
         
     const esqueceuSenha = ()=>{
@@ -35,9 +36,9 @@ const FormNew = () => {
                 <Button type="submit" className='button1'>Login</Button>
                 
                 <div className="lowlogin">
-                <a href="" onClick={esqueceuSenha} className="link">Esqueceu a senha?</a> 
+                <a id="link" href="" onClick={esqueceuSenha} className="link">Esqueceu a senha?</a> 
                 <hr/>
-                <a  href="" className="link">Cadastre-se</a>
+                <a id="link1" href="" className="link">Cadastre-se</a>
                 </div>
             </Form>
         </Div>

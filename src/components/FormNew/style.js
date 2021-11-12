@@ -9,6 +9,9 @@ font-weight: bold;
 .lowlogin{
     padding-top: 45px;
     text-align: center;
+}
+
+#link, #link1{
     text-decoration: none;
 }
 

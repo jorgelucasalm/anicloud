@@ -17,6 +17,7 @@ const FormNew = () => {
     const onSubmit = data => {
     console.log(data)
     alert("Login feito com Sucesso!");
+    document.location.reload(true);
 }
         
     const esqueceuSenha = ()=>{

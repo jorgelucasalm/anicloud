@@ -6,6 +6,16 @@ width: 100%;
 justify-content: space-around;
 font-weight: bold;
 
+.lowlogin{
+    padding-top: 45px;
+    text-align: center;
+    text-decoration: none;
+}
+
+hr{
+    margin:8px 0;
+}
+
 img{
     border-radius: 20px;
     width: 55%;

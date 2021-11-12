@@ -6,14 +6,23 @@ width: 100%;
 justify-content: space-around;
 font-weight: bold;
 
-.lowlogin{
-    padding-top: 45px;
-    text-align: center;
+#link{
     text-decoration: none;
 }
 
+#link1{
+    text-decoration: none;
+}
+
+.lowlogin{
+    text-decoration: none;
+    padding-top: 45px;
+    text-align: center;
+    
+}
+
 hr{
-    margin: 4px 0;
+    margin: 8px 0;
 }
 
 img{

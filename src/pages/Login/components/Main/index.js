@@ -8,6 +8,7 @@ const Main = styled.main`
     display: flex;
     justify-content: space-between;
     align-items: center; 
+    margin-top: 55px!important;
     border-radius: 15px;
     margin: 5rem auto;
     @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');

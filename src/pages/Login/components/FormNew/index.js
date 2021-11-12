@@ -34,10 +34,10 @@ const FormNew = () => {
                 
                 <Button type="submit" className='button1'>Login</Button>
                 
-                <div style={{paddingTop: '45px', textAlign: 'center'}}>
-                <a href="x" onClick={esqueceuSenha} className="link">Esqueceu a senha?</a> 
+                <div className="lowlogin">
+                <a href="" onClick={esqueceuSenha} className="link">Esqueceu a senha?</a> 
                 <hr/>
-                <a  href="x" className="link">Cadastre-se</a>
+                <a  href="" className="link">Cadastre-se</a>
                 </div>
             </Form>
         </Div>

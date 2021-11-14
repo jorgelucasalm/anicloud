@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import "../reset.css";
-import "../index.css";
 
 export const TopLeftArticle = () => {
   const [data] = useState({

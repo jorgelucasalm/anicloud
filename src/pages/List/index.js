@@ -1,19 +1,33 @@
 import Navbar from "../../components/navbar";
 import Card from "./components/Card";
 import "./style.css";
+import qs from 'qs'
 import api from "../../services/api";
 import { useEffect, useState } from "react";
+import Pagination from "./Pagination";
 
 const List = (props) => {
+  const LIMIT = 10;
   const [screen, setScreen] = useState([]);
+  const [offset, setOffset] = useState(0);
+  const [maxItens, setMaxItens] = useState(0);
 
   useEffect(() => {
-    api.get("/" + props.screen).then((response) => {
+    const query = {
+      page: {
+        limit: LIMIT,
+        offset,
+      }
+    };
+
+    const url = props.screen + "?";
+    api.get(url+qs.stringify(query)).then((response) => {
       const res = response.data.data;
+      setMaxItens(response.data.meta.count)
       let scopeFilter = [];
 
       res.map((anime) => {
-        scopeFilter.push({
+        return scopeFilter.push({
           id: anime.id,
           name: anime.attributes.titles.en,
           nameAlternative: anime.attributes.titles.en_jp,
@@ -32,7 +46,7 @@ const List = (props) => {
       setScreen(scopeFilter);
       return;
     });
-  }, []);
+  }, [offset, props.screen]);
 
   return (
     <>
@@ -42,6 +56,13 @@ const List = (props) => {
           return <Card key={anime.id} {...anime} screen={props.screen} />;
         })}
       </div>
+
+      <Pagination 
+      limit={LIMIT} 
+      total={maxItens} 
+      offset={offset}
+      setOffset={setOffset}
+      />
     </>
   );
 };

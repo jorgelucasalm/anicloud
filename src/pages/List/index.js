@@ -5,12 +5,14 @@ import qs from 'qs'
 import api from "../../services/api";
 import { useEffect, useState } from "react";
 import Pagination from "./Pagination";
+import Searchbar from "./components/Serchbar";
 
 const List = (props) => {
   const LIMIT = 10;
   const [screen, setScreen] = useState([]);
   const [offset, setOffset] = useState(0);
   const [maxItens, setMaxItens] = useState(0);
+  const [text, setText] = useState('');
 
   useEffect(() => {
     const query = {
@@ -19,6 +21,12 @@ const List = (props) => {
         offset,
       }
     };
+
+    if (text) {
+      query.filter = {
+        text
+      };
+    }
 
     const url = props.screen + "?";
     api.get(url+qs.stringify(query)).then((response) => {
@@ -46,11 +54,12 @@ const List = (props) => {
       setScreen(scopeFilter);
       return;
     });
-  }, [offset, props.screen]);
+  }, [offset, props.screen, text]);
 
   return (
     <>
       <Navbar />
+      <Searchbar onChange={e => setText(e.target.value)}/>
       <div className="list">
         {screen.map((anime) => {
           return <Card key={anime.id} {...anime} screen={props.screen} />;

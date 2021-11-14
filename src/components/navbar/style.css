@@ -32,3 +32,77 @@ nav a{
 .navbar-list li {
   margin: 0 2rem;
 }
+
+nav button {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+@media(max-width: 880px){
+  
+  .hidden {
+    display: block;
+  }
+
+  .navbar-list{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 70px;
+    right: 0;
+    height: 0;
+    transition: .6s;
+    z-index: 1000;
+    background-color: #093D4E;
+    visibility: hidden;
+    overflow-y: hidden;
+  }
+
+  .navbar-list + span {
+    display: none;
+  }
+
+  .navbar-list.active {
+
+    visibility: visible;
+    height: 15rem;
+  }
+
+  .navbar-list li {
+    padding: 1rem;
+    cursor: pointer;
+  }
+  
+  .navbar-list li:hover {
+    border-radius: 4px;
+    background-color: #07313f;
+  }
+
+  nav button {
+    display: flex;
+    padding: .5rem 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    gap: .5rem;
+  }
+
+  #hamburguer{
+    border-top: 3px solid #c1c1c1;
+    width: 30px;
+  }
+
+  #hamburguer::after, #hamburguer::before{
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #c1c1c1;
+    margin-top: 7px;
+  }
+}

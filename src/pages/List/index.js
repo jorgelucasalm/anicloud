@@ -1,37 +1,39 @@
-import Navbar from "../../components/navbar";
-import Card from "./components/Card";
-import "./style.css";
-import qs from 'qs'
-import api from "../../services/api";
 import { useEffect, useState } from "react";
+import qs from "qs";
+import "./style.css";
+import Navbar from "../../components/navbar";
+import api from "../../services/api";
+import Card from "./components/Card";
 import Pagination from "./Pagination";
 import Searchbar from "./components/Serchbar";
+import Loading from "./components/Loading/Loading";
 
 const List = (props) => {
   const LIMIT = 10;
-  const [screen, setScreen] = useState([]);
   const [offset, setOffset] = useState(0);
   const [maxItens, setMaxItens] = useState(0);
-  const [text, setText] = useState('');
+  const [screen, setScreen] = useState([]);
+  const [text, setText] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const query = {
       page: {
         limit: LIMIT,
         offset,
-      }
+      },
     };
 
     if (text) {
       query.filter = {
-        text
+        text,
       };
     }
 
     const url = props.screen + "?";
-    api.get(url+qs.stringify(query)).then((response) => {
+    api.get(url + qs.stringify(query)).then((response) => {
       const res = response.data.data;
-      setMaxItens(response.data.meta.count)
+      setMaxItens(response.data.meta.count);
       let scopeFilter = [];
 
       res.map((anime) => {
@@ -52,6 +54,7 @@ const List = (props) => {
       });
 
       setScreen(scopeFilter);
+      setLoading(false);
       return;
     });
   }, [offset, props.screen, text]);
@@ -59,18 +62,21 @@ const List = (props) => {
   return (
     <>
       <Navbar />
-      <Searchbar onChange={e => setText(e.target.value)}/>
+      <Searchbar onChange={(e) => setText(e.target.value)} />
       <div className="list">
-        {screen.map((anime) => {
-          return <Card key={anime.id} {...anime} screen={props.screen} />;
-        })}
+        {loading ? (
+          <Loading />
+        ) : (
+          screen.map((anime) => {
+            return <Card key={anime.id} {...anime} screen={props.screen} />;
+          })
+        )}
       </div>
-
-      <Pagination 
-      limit={LIMIT} 
-      total={maxItens} 
-      offset={offset}
-      setOffset={setOffset}
+      <Pagination
+        limit={LIMIT}
+        total={maxItens}
+        offset={offset}
+        setOffset={setOffset}
       />
     </>
   );

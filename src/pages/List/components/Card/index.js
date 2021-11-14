@@ -12,10 +12,10 @@ const Card = (props) => {
       if (data.length !== 0) {
         setGenre(data[0].attributes.name);
       } else {
-        return setGenre(NaN);
+        return setGenre('NaN');
       }
     });
-  }, []);
+  }, [props.screen, props.id]);
 
   const consoleTest = () => {};
 

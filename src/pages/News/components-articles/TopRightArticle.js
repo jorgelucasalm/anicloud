@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import "../reset.css";
-import "../index.css";
-
 export const TopRightArticle = () => {
   const [data] = useState({
     author: "João Araujo",

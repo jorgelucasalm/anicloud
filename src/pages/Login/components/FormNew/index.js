@@ -38,7 +38,7 @@ const FormNew = () => {
                 <div className="lowlogin">
                 <a id="link" href="" onClick={esqueceuSenha} className="link">Esqueceu a senha?</a> 
                 <hr/>
-                <a id="link1" href="" className="link">Cadastre-se</a>
+                <a id="link1" href="/registro" className="link">Cadastre-se</a>
                 </div>
             </Form>
         </Div>

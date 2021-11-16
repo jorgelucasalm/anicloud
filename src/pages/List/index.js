@@ -50,6 +50,7 @@ const List = (props) => {
             anime.attributes.startDate !== null
               ? anime.attributes.startDate.substr(0, 4)
               : "NaN",
+          description: anime.attributes.description,
         });
       });
 

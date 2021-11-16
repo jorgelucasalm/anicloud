@@ -73,6 +73,7 @@ const Card = (props) => {
             
           <span className="modal-date">{props.date}</span>
         </h2>
+        <h3>Classificação: <span className="modal-age">{props.age}</span></h3>
         <div className="modal-genres">
         {genres.map(item => <span className="modal-genre">{item.attributes.name}</span>)}
         <p className="modal-description">
@@ -83,7 +84,7 @@ const Card = (props) => {
       </Modal>
       <div className="card">
         <img src={props.image} alt="" onClick={openModal} />
-        <h2>
+        <h2 onClick={openModal}>
           {props.name !== undefined && null
             ? props.name
             : props.nameAlternative}

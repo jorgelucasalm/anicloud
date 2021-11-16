@@ -60,6 +60,7 @@
 }
 
 .modal-title {
+  text-align: center;
   margin: 2rem 0;
 }
 
@@ -68,6 +69,7 @@
 }
 
 .modal-genres {
+  margin-top: 2rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -97,6 +99,14 @@
   background-color: #428A29;  
   padding: .2rem .8rem;
   border-radius: 5px;
+}
+
+.modal-age {
+  
+  border-radius: 5px;
+  margin-left: .5rem;
+  padding: .2rem .5rem;
+  background-color: #957191;
 }
 
 @media(max-width: 1200px){

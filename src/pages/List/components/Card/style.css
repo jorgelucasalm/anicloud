@@ -39,6 +39,66 @@
   background-color: #957191;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;   
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;   
+  border-radius: 4rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.modal-title {
+  margin: 2rem 0;
+}
+
+.modal-image {
+  margin-top: 2rem;
+}
+
+.modal-genres {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.modal-genre {
+  padding: 0.2rem 0.8rem;  
+  background:#E75738;
+  border-radius: 5px;
+  margin-bottom: .5rem;
+}
+
+.modal-genres span + span{
+  margin-left: 1rem;
+}
+
+.modal-description {
+  margin: 1rem 0;
+}
+
+.modal-description h3{
+  margin-bottom: 1rem;
+}
+
+.modal-date {
+  margin-left: 1rem;
+  background-color: #428A29;  
+  padding: .2rem .8rem;
+  border-radius: 5px;
+}
+
 @media(max-width: 1200px){
   .card{
     width: 25%;

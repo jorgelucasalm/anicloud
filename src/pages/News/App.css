@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
-body {
-  background-color: #04465A;
-  display: grid;
+.news-content {
+  display: flex;
+  justify-content: center;
 }
 
 .news section {
@@ -17,12 +17,13 @@ body {
 
 .news h1 {
   font-family: 'Open Sans', sans-serif;
-  font-size: 32px;
+  font-size: 24px;
   color: #ffffff;
 }
 
 .news span {
   color: #ffffff;
+  font-size: 16px;
 }
 
 .news img {
@@ -38,7 +39,7 @@ body {
   text-decoration: none;
 }
 
-.mainArticleTitle:hover {
+#mainArticleTitle:hover {
   color: 	#C0C0C0;
 }
 
@@ -46,9 +47,10 @@ body {
   color: 	#C0C0C0;
 }
 
-.pageTitle  {
+#pageTitle {
   padding: 15px;
   font-family: 'Acme', sans-serif;
+  font-size: 42px;
 }
 
 .mainImage {
@@ -64,11 +66,13 @@ body {
 
 .mainArticle {
   margin: 0.8rem;
-  width: 45%;
-  height: 78%;
+  width: 36rem;
+  height: 34rem;
   display: flex;
-  position: absolute;
   object-fit: contain;
+  flex: flex-wrap;
+  float: left;
+  position: static;
 }
 
 .subArticles {
@@ -79,10 +83,13 @@ body {
   grid-template-columns: 1fr 1fr;
   place-items: center;
   float: right;
-  top: auto;
   object-fit: fill;
+  flex: flex-wrap;
 }
 
+.hiddenArticlesLeft, .hiddenArticlesRight {
+  display: none;
+}
 
 .topLeftArticle {
   align-content: stretch;
@@ -114,7 +121,7 @@ body {
   width: 95%;
 }
 
-.mainArticleTitle {
+#mainArticleTitle {
   font-size: 48px;
   line-height: 110%;
   margin-bottom: 0.5rem;
@@ -162,3 +169,226 @@ body {
   margin-top: 0.8rem;
 }
 
+
+@media(min-width: 1200px) {
+
+.mainImage {
+    max-width: 36rem;
+    max-height: 22rem;
+    margin-bottom: 2rem;
+  }
+
+.subImage {
+    max-width: 16rem;
+    max-height: 8rem;
+  }
+
+.subArticles {
+    margin-top: 0.2rem;
+    width: 34rem;
+    height: 46rem;
+  }
+
+.news h1 {
+    font-size: 26px;
+  }
+
+.bottomRightArticle {
+    width: 88%;
+    height: 85%;
+  }
+
+.bottomLeftArticle {
+    width: 88%;
+    height: 85%;
+  }
+
+.topRightArticle {
+    width: 88%;
+    height: 85%;
+  }
+
+.topLeftArticle {
+    width: 88%;
+    height: 85%;
+  }
+
+  
+#mainArticleTitle {
+  font-size: 52px;
+  margin-bottom: 1.5rem;
+}
+
+.articleDescription {
+  font-size: 28px;
+  margin-bottom: 1.3rem;
+}
+}
+
+@media(min-width: 992px) and (max-width: 1199px) {
+
+.mainArticle {
+    width: 28rem;
+    height: 34rem;
+  }
+
+.mainImage {
+    max-width: 29rem;
+    max-height: 18rem;
+    margin-bottom: 2rem;
+  }
+
+.subArticles {
+    margin-top: 0.3rem;
+    width: 29rem;
+    height: 34rem;
+  }
+
+.subImage {
+    max-width: 12rem;
+    max-height: 8rem;
+  }
+
+.news h1 {
+    font-size: 22px;
+  }
+
+.bottomRightArticle {
+    width: 80%;
+    height: 85%;
+  }
+
+.bottomLeftArticle {
+    width: 80%;
+    height: 85%;
+  }
+
+.topRightArticle {
+    width: 80%;
+    height: 85%;
+  }
+
+.topLeftArticle {
+    width: 80%;
+    height: 85%;
+  }
+  
+#mainArticleTitle {
+  font-size: 44px;
+  margin-bottom: 1.5rem;
+}
+
+.articleDescription {
+  font-size: 28px;
+  margin-bottom: 1.5rem;
+}
+}
+
+@media(min-width: 768px) and (max-width: 991px) {
+
+
+.hiddenArticlesLeft, .hiddenArticlesRight {
+    display: unset;
+  }
+
+.mainArticle {
+    width: 23rem;
+    height: 68rem;
+    left: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+.mainImage {
+    max-width: 23rem;
+    max-height: 22rem;
+    margin-bottom: 2rem;
+  }
+
+.subArticles {
+    display: none;
+  }
+
+.subImage {
+    max-width: 16rem;
+    max-height: 14rem;
+  }
+
+.hiddenArticlesLeft {
+    float: left;
+    width: 45rem;
+    height: 26rem;
+    margin-top: 1.8rem;
+  }
+
+.hiddenArticlesRight {
+    float: right;
+    width: 21rem;
+    height: 40rem;
+    margin-top: 1.8rem;
+  }
+
+.bottomRightArticle {
+    width: 80%;
+    height: 85%;
+  }
+
+.bottomLeftArticle {
+    width: 50%;
+    height: 80%;
+  }
+
+.topRightArticle {
+    width: 80%;
+    height: 62%;
+  }
+
+.topLeftArticle {
+    width: 50%;
+    height: 80%;
+  }
+
+#mainArticleTitle {
+  font-size: 36px;
+  margin-bottom: 1.5rem;
+}
+
+.articleDescription {
+  font-size: 28px;
+  margin-bottom: 1.4rem;
+}
+
+.subArticleTitle {
+  font-size: 36px;
+}
+}
+
+@media(min-width: 0px) and (max-width: 767px) {
+
+.mainArticle, .subArticles {
+    width: 100%;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.3rem;
+    margin: auto;
+  }
+
+.mainImage, .subImage {
+    max-width: 30rem;
+    max-height: 30rem;
+    margin-bottom: 2rem;
+  }
+
+#mainArticleTitle {
+  font-size: 24px;
+}
+
+.articleDescription {
+  display: none;
+}
+
+.subArticleTitle {
+  font-size: 24px;
+}
+}

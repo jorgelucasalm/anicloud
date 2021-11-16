@@ -1,6 +1,6 @@
 import Navbar from "../../components/navbar";
 import "./style.css";
-import Image from '../../assets/img/teste.jpg'
+import Image from "../../assets/img/teste.jpg";
 
 const Home = () => {
   return (
@@ -18,7 +18,33 @@ const Home = () => {
               totalmente gratuita.
             </p>
           </div>
-          <div className="image-content">
+          <div className="image-content i-fe">
+            <img src={Image} alt="" />
+          </div>
+        </div>
+
+        <div className="home-content">
+          <div className="image-content i-fs">
+            <img src={Image} alt="" />
+          </div>
+          <div className="text-content">
+            <h1>O que é Anime?</h1>
+            <p>
+              Animes e Mangás são desenhos animados e em quadrinhos de origem
+              japonesa. No Japão, anime e mangá são nomes dados a qualquer tipo
+              de desenho, sejam eles do próprio país, ou não. Porém, no
+              Ocidente, apenas as criações japonesas são denominadas dessa
+              maneira.
+            </p>
+          </div>
+        </div>
+
+        <div className="about-content">
+          <h1>Sobre nós</h1>
+
+          <div className="image-about-us i-fs">
+            <img src={Image} alt="" cla />
+            <img src={Image} alt="" />
             <img src={Image} alt="" />
           </div>
         </div>

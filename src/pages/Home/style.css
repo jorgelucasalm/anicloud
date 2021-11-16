@@ -8,6 +8,7 @@
   margin: 0 auto;
   display: flex;
   max-width: 1440px;
+  margin-bottom: 2rem;
 }
 
 .home-content div{
@@ -21,6 +22,13 @@
 
 .home .image-content {
   display: flex;
+}
+
+.i-fs {
+  justify-content: flex-start;
+}
+
+.i-fe {
   justify-content: flex-end;
 }
 
@@ -28,4 +36,23 @@
 .home .image-content img{
   width: 500px;
   height: 300px;
+}
+
+.image-about-us img{
+  border-radius: 50%;
+  width: 124px;
+}
+
+.about-content{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-content h1{
+  font-size: 2rem;
+  padding-bottom: 2rem;
+}
+
+.about-content img + img {
+  margin-left: 1.5rem;
 }

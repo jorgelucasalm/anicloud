@@ -79,12 +79,13 @@
   display: grid;
   margin-top: 0.8rem;
   width: 48rem;
-  height: 38.5rem;
+  height: max-content;
   grid-template-columns: 1fr 1fr;
   place-items: center;
   float: right;
   object-fit: fill;
   flex: flex-wrap;
+  margin-bottom: 2rem;
 }
 
 .hiddenArticlesLeft, .hiddenArticlesRight {
@@ -186,7 +187,7 @@
 .subArticles {
     margin-top: 0.2rem;
     width: 34rem;
-    height: 46rem;
+    height: max-content;
   }
 
 .news h1 {
@@ -241,7 +242,7 @@
 .subArticles {
     margin-top: 0.3rem;
     width: 29rem;
-    height: 34rem;
+    height: max-content;
   }
 
 .subImage {

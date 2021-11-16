@@ -1,6 +1,9 @@
 import Navbar from "../../components/navbar";
 import "./style.css";
 import Image from "../../assets/img/teste.jpg";
+import Jorge from "../../assets/img/Jorge.jfif";
+import Joao from "../../assets/img/Joao.jfif";
+import Ian from "../../assets/img/Ian.jfif";
 
 const Home = () => {
   return (
@@ -43,9 +46,9 @@ const Home = () => {
           <h1>Sobre nós</h1>
 
           <div className="image-about-us i-fs">
-            <img src={Image} alt="" cla />
-            <img src={Image} alt="" />
-            <img src={Image} alt="" />
+            <img src={Jorge} alt="Jorge Lucas" />
+            <img src={Joao} alt="João Victor" />
+            <img src={Ian} alt="" />
           </div>
         </div>
       </section>

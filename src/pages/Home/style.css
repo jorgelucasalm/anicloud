@@ -3,21 +3,27 @@
   font-size: 1.2rem;
 }
 
+.home h2{
+  font-family: Acme;
+  font-weight: normal;
+  font-size: 2rem;
+  padding-bottom: 1rem;
+}
+
 .home-content{
   padding: 2rem 1rem;
   margin: 0 auto;
   display: flex;
   max-width: 1440px;
-  margin-bottom: 2rem;
+}
+
+.home-content h2 {
+  
+  letter-spacing: .1rem;
 }
 
 .home-content div{
   width: 50%;
-}
-
-.home-content h1{
-  font-size: 2rem;
-  padding-bottom: 1rem;
 }
 
 .home .image-content {
@@ -26,33 +32,52 @@
 
 .i-fs {
   justify-content: flex-start;
+  padding-right: 2rem;
 }
 
 .i-fe {
   justify-content: flex-end;
 }
 
-
 .home .image-content img{
-  width: 500px;
-  height: 300px;
-}
-
-.image-about-us img{
-  border-radius: 50%;
-  width: 124px;
+  width: 100%;
+  max-width: 550px;
 }
 
 .about-content{
   text-align: center;
-  margin-bottom: 2rem;
+  margin: 2rem 0;
 }
 
-.about-content h1{
-  font-size: 2rem;
-  padding-bottom: 2rem;
+.about-us-profile {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
 }
 
-.about-content img + img {
-  margin-left: 1.5rem;
+.about-profile h2{
+  padding: 1rem 0;
+  font-family: sans-serif;
+  font-size: 1.8rem;
+}
+
+.about-profile {
+  width: 250px;
+  padding: 2rem;
+}
+
+.about-profile img{
+  border-radius: 50%;
+  width: 156px;
+}
+
+.about-link {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.about-link a{
+  text-decoration: none;
+  color: white;
 }

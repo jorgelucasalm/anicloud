@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 const Div = styled.div`
-display: flex;
-width: 100%;
-justify-content: space-around;
-font-weight: bold;
+    
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-weight: bold;
 
 .lowlogin{
     padding-top: 45px;
@@ -21,8 +22,8 @@ hr{
 
 img{
     border-radius: 20px;
-    width: 55%;
-    margin-left: 2%;
+    width: 60%;
+    margin-left: 3%;
 }
 
 span{

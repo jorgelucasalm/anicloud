@@ -38,6 +38,7 @@ body {
 .news img {
   border-radius: 10px;
   margin-bottom: 1rem;
+  width: 100%;
 }
 
 .news img:hover {
@@ -373,6 +374,10 @@ body {
 }
 
 @media(max-width: 767px) {
+  body {
+    
+    overflow-x: hidden;
+  }
 
 .mainArticle, .subArticles {
     width: 100%;

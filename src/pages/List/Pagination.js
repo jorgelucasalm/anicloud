@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const MAX_ITENS = 5;
 const MAX_LEFT = (MAX_ITENS - 1) / 2;
@@ -16,7 +17,12 @@ const Pagination = ({ limit, total, offset, setOffset }) => {
   return (
     <ul style={{ textAlign: "center" }} className="pagination">
       <li>
-        <button onClick={() => pageOnChange(current - 1)} disabled={current === 1}>Anterior</button>
+        <button
+          onClick={() => pageOnChange(current - 1)}
+          disabled={current === 1}
+        >
+          <FaArrowLeft />
+        </button>
       </li>
       {Array.from({ length: Math.min(MAX_ITENS, pages) })
         .map((_, index) => index + first)
@@ -31,7 +37,12 @@ const Pagination = ({ limit, total, offset, setOffset }) => {
           </li>
         ))}
       <li>
-        <button onClick={() => pageOnChange(current + 1)} disabled={current === pages}>Próximo</button>
+        <button
+          onClick={() => pageOnChange(current + 1)}
+          disabled={current === pages}
+        >
+          <FaArrowRight />
+        </button>
       </li>
     </ul>
   );

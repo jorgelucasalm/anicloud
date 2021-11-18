@@ -3,18 +3,26 @@ import { Context } from "../../Context/Authenticate";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
+import { useHistory } from "react-router-dom";
 
 const Navbar = () => {
   const list = useRef(null);
   const { authenticate, authenticateLogin } = useContext(Context);
   const user = JSON.parse(localStorage.getItem("data"));
-  console.log(user);
+  
+  const history = useHistory();
 
   const onClick = () => {
     const span = list.current; // corresponding DOM node
     var css = span.className === "navbar-list active" ? "none" : "active";
     span.className = "navbar-list " + css;
   };
+
+  const logout = () => {
+    authenticateLogin();
+    history.push("/");
+
+  }
 
   return (
     <nav>
@@ -36,7 +44,7 @@ const Navbar = () => {
                 <li>Notícias</li>
               </Link>
 
-              <li className="hidden" style={{ cursor: "pointer" }} onClick={authenticateLogin}>
+              <li className="hidden" style={{ cursor: "pointer" }} onClick={logout}>
                 Sair
               </li>
             </>
@@ -50,7 +58,7 @@ const Navbar = () => {
           {authenticate ? (
             <>
               <span style={{ marginRight: "2rem" }}>Olá, {user.name}</span>
-              <span style={{ cursor: "pointer" }} onClick={authenticateLogin}>
+              <span style={{ cursor: "pointer" }} onClick={logout}>
                 Sair
               </span>
             </>

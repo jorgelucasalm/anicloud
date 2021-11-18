@@ -1,43 +1,41 @@
 import styled from "styled-components";
 
 const Div = styled.div`
-display: flex;
-width: 100%;
-justify-content: space-around;
-font-weight: bold;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-weight: bold;
 
-#link{
+  #link {
     text-decoration: none;
-}
+  }
 
-#link1{
+  #link1 {
     text-decoration: none;
-}
+  }
 
-.lowlogin{
+  .lowlogin {
     text-decoration: none;
     padding-top: 45px;
     text-align: center;
-    
-}
+  }
 
-hr{
+  hr {
     margin: 8px 0;
-}
+  }
 
-img{
+  img {
     border-radius: 20px;
-    width: 55%;
-    margin-left: 2%;
-}
+    width: 60%;
+    margin-left: 3%;
+  }
 
-span{
+  span {
     color: #ff0000;
-}
+  }
 
-.link{
-    
-}
+  .link {
+  }
 `;
 
 export default Div;

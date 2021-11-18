@@ -80,6 +80,11 @@
 .about-link a{
   text-decoration: none;
   color: white;
+  transition: .2s ease-out;
+}
+
+.about-link a:hover{
+  color: wheat;
 }
 
 @media(max-width: 750px){

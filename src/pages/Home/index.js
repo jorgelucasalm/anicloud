@@ -52,10 +52,10 @@ const Home = () => {
               <img src={Jorge} alt="Jorge Lucas" />
               <h2>Jorge Lucas</h2>
               <div className="about-link">
-                <a href="/">
+                <a href="https://github.com/JorgeLucas006" target="_blank" rel="noreferrer">
                   <FaGithub size="3rem" />
                 </a>
-                <a href="">
+                <a href="https://www.linkedin.com/in/jorgelucasalm/" target="_blank" rel="noreferrer">
                   <FaLinkedin size="3rem" />
                 </a>
               </div>
@@ -64,10 +64,10 @@ const Home = () => {
               <img src={Joao} alt="João Victor" />
               <h2>João Victor</h2>
               <div className="about-link">
-                <a href="/">
+                <a href="https://github.com/Joao-Victor-Araujo" target="_blank" rel="noreferrer">
                   <FaGithub size="3rem" />
                 </a>
-                <a href="">
+                <a href="https://www.linkedin.com/in/jvas1999/" target="_blank" rel="noreferrer">
                   <FaLinkedin size="3rem" />
                 </a>
               </div>
@@ -76,10 +76,10 @@ const Home = () => {
               <img src={Ian} alt="Ian" />
               <h2>Ian</h2>
               <div className="about-link">
-                <a href="/">
+                <a href="https://github.com/j-iann" target="_blank" rel="noreferrer">
                   <FaGithub size="3rem" />
                 </a>
-                <a href="">
+                <a href="https://www.linkedin.com/in/jesper-ian-brayner-55a17a219/" target="_blank" rel="noreferrer">
                   <FaLinkedin size="3rem" />
                 </a>
               </div>

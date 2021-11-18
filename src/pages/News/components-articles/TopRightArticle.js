@@ -10,14 +10,14 @@ export const TopRightArticle = () => {
   });
   return (
     <article className="articleBody">
-      <a href="">
+      <a href="/">
         <img
           className="subImage"
           alt="serial-experiments-lain"
           src={data.urlToImage}
         ></img>
       </a>
-      <a href="">
+      <a href="/">
         <h1 className="subArticleTitle">{data.title}</h1>
       </a>
       <span className="articleAuthor">{data.author}</span>

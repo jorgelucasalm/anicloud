@@ -12,14 +12,14 @@ export const MainArticle = () => {
   });
   return (
     <article className="articleBody">
-      <a href="">
+      <a href="/">
         <img
           className="mainImage"
           alt="tokyo-revengers"
           src={data.urlToImage}
         ></img>
       </a>
-      <a href="">
+      <a href="/">
         <h1 className="mainArticleTitle">{data.title}</h1>
       </a>
       <p className="articleDescription">{data.description}</p>

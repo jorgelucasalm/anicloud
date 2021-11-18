@@ -73,7 +73,7 @@ const FormNew = () => {
           </a>
           <hr />
           <span id="link1">
-            <Link to="/registro">Entrar</Link>
+            <Link to="/registro">Cadastre-se</Link>
           </span>
         </div>
       </Form>

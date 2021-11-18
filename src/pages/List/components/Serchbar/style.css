@@ -1,0 +1,35 @@
+.searchbar {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.searchbar input {
+  width: 20rem;
+  height: 2.5rem;
+  background: #07313f;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  color: #fff;
+  padding-left: 3rem;
+}
+.searchbar input:focus {
+  border: none;
+  outline: solid 1px #C1C1C1;
+}
+
+::-webkit-input-placeholder {
+  color: #C1C1C1;
+}
+
+.searchbar label {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  left: 15px;
+  top: 4px;
+  width: 1rem;
+  filter: invert(100%);
+}

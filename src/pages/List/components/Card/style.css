@@ -1,0 +1,136 @@
+.card {
+  width: 20%;
+  padding: 0rem .8rem 3rem .8rem;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  cursor: pointer;
+}
+
+.card h2{
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.card-status {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.card-status span {
+  padding: .2rem .8rem;
+  margin-top: .8rem;
+  margin-right: .5rem;
+  border-radius: 5px;
+}
+
+.genre{
+  background:#E75738;
+}
+
+.date {
+  background-color: #428A29;
+}
+
+.status {
+  background-color: #957191;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;   
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;   
+  border-radius: 4rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.modal-title {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.modal-image {
+  margin-top: 2rem;
+}
+
+.modal-genres {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.modal-genre {
+  padding: 0.2rem 0.8rem;  
+  background:#E75738;
+  border-radius: 5px;
+  margin-bottom: .5rem;
+}
+
+.modal-genres span + span{
+  margin-left: 1rem;
+}
+
+.modal-description {
+  margin: 1rem 0;
+}
+
+.modal-description h3{
+  margin-bottom: 1rem;
+}
+
+.modal-date {
+  margin-left: 1rem;
+  background-color: #428A29;  
+  padding: .2rem .8rem;
+  border-radius: 5px;
+}
+
+.modal-age {
+  
+  border-radius: 5px;
+  margin-left: .5rem;
+  padding: .2rem .5rem;
+  background-color: #957191;
+}
+
+@media(max-width: 1200px){
+  .card{
+    width: 25%;
+  }
+}
+
+@media(max-width: 900px){
+  .card{
+    width: 33%;
+  }
+}
+
+
+@media(max-width: 700px){
+  .card{
+    width: 50%;
+  }
+}
+
+
+@media(max-width: 500px){
+  .card{
+    width: 100%;
+  }
+}

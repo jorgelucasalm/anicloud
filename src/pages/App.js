@@ -1,10 +1,12 @@
-import './App.css';
+import "./App.css";
+import Routes from "../router";
+import { Authenticate } from "../Context/Authenticate";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Olá</h1>
-    </div>
+    <Authenticate >
+      <Routes />
+    </Authenticate>
   );
 }
 

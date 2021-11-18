@@ -23,27 +23,28 @@ const Navbar = () => {
           <Link to="/">AniCloud</Link>
         </span>
         <ul className="navbar-list" ref={list}>
-          <Link to="/animes">
-            <li>Animes</li>
-          </Link>
-          <Link to="/mangas">
-            <li>Mangás</li>
-          </Link>
-          <Link to="/noticias">
-            <li>Notícias</li>
-          </Link>
-
           {/* Caso esteja logado o menu hamburguer deve mostrar apenas o valor Sair */}
           {authenticate ? (
-            <li style={{ cursor: "pointer" }} onClick={authenticateLogin}>
-              Sair
-            </li>
-          ) : (
-          <Link to="/login">
-            <li className="hidden">Entrar</li>
-          </Link>
-          )}
+            <>
+              <Link to="/animes">
+                <li>Animes</li>
+              </Link>
+              <Link to="/mangas">
+                <li>Mangás</li>
+              </Link>
+              <Link to="/noticias">
+                <li>Notícias</li>
+              </Link>
 
+              <li className="hidden" style={{ cursor: "pointer" }} onClick={authenticateLogin}>
+                Sair
+              </li>
+            </>
+          ) : (
+            <Link to="/login">
+              <li className="hidden">Entrar</li>
+            </Link>
+          )}
         </ul>
         <span>
           {authenticate ? (

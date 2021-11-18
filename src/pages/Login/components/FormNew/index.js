@@ -8,10 +8,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import schema from "./Validation";
 import img2 from "./anime.png";
 import Div from "./style";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const FormNew = () => {
-    const { authenticateLogin } = useContext(Context);
+  const { authenticateLogin } = useContext(Context);
   const history = useHistory();
   const user = JSON.parse(localStorage.getItem("data"));
   const {
@@ -72,9 +72,9 @@ const FormNew = () => {
             Esqueceu a senha?
           </a>
           <hr />
-          <a id="link1" href="/registro" className="link">
-            Cadastre-se
-          </a>
+          <span id="link1">
+            <Link to="/registro">Entrar</Link>
+          </span>
         </div>
       </Form>
     </Div>

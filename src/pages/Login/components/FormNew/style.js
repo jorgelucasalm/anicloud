@@ -10,10 +10,10 @@ const Div = styled.div`
     text-decoration: none;
   }
 
-  #link1 {
+  #link1 a{
     text-decoration: none;
   }
-
+  
   .lowlogin {
     text-decoration: none;
     padding-top: 45px;

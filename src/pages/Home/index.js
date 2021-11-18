@@ -3,7 +3,7 @@ import Navbar from "../../components/navbar";
 import "./style.css";
 import Logo from "../../assets/img/logo.png";
 import Jorge from "../../assets/img/Jorge.jfif";
-import Joao from "../../assets/img/Joao.jfif";
+import Joao from "../../assets/img/Joao.jpeg";
 import Ian from "../../assets/img/Ian.jfif";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 

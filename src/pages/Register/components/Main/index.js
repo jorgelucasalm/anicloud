@@ -19,11 +19,13 @@ const Main = styled.main`
       margin-right: 7vw;
     }
   }
+
   @media (max-width: 1220px) {
     form {
       margin-right: 6vw;
     }
   }
+
   @media (max-width: 1025px) {
     form {
       width: 12rem;
@@ -37,9 +39,13 @@ const Main = styled.main`
     }
   }
   @media (max-width: 768px) {
+    
     form {
-      margin-left: 35%;
-      max-width: 200vw;
+      margin: 0;
+    }
+
+    div {
+      justify-content: center;
     }
 
     #title {
@@ -52,23 +58,12 @@ const Main = styled.main`
   @media (max-width: 415px) {
     form {
       width: 12rem;
-      margin-left: 23%;
-    }
-    span {
-      font-size: 0.8rem;
     }
 
-    img {
-      display: none;
+    input {
+      width: 100%;
     }
-    #title {
-      font-size: 1.7rem;
-    }
-  }
-  @media (max-width: 380px) {
-    form {
-      margin-left: 19%;
-    }
+
     span {
       font-size: 0.8rem;
     }

@@ -3,9 +3,9 @@ import Label from './Label';
 import Input from './Input';
 import Content from './Content';
 
-const Text = ({label, type, name, register, placeholder, required, defaultValue})=>(
+const Text = ({label, type, name, register, placeholder, required, defaultValue, id})=>(
 <Label>
-    <Content>{label}</Content>
+    <Content id="title">{label}</Content>
     <Input placeholder={placeholder} type={type} name={name} ref={register} {...register({label}, { required })} defaultValue={defaultValue} ></Input>
 </Label>
 );

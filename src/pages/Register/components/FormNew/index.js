@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../../../../Context/Authenticate";
 import Field from "../Field";
 import Form from "../Form";
 import { useForm } from "react-hook-form";
@@ -10,7 +11,8 @@ import Div from "./style";
 import { useHistory } from "react-router-dom";
 
 const FormNew = () => {
-  let history = useHistory();
+  const { createRegister } = useContext(Context);
+  const history = useHistory();
 
   const {
     register,
@@ -21,9 +23,8 @@ const FormNew = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
-    alert("Cadastro feito com Sucesso!");
-    history.push("/login");
+    createRegister(data);
+    history.replace("/login");
   };
 
   return (

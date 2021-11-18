@@ -1,3 +1,4 @@
+import React from "react";
 import Navbar from "../../components/navbar";
 import "./style.css";
 import Logo from "../../assets/img/logo.png";
@@ -15,10 +16,10 @@ const Home = () => {
           <div className="text-content">
             <h2>Bem-vindo ao aniCloud</h2>
             <p>
-              O aniCloud é o melhor site onde você pode assistir seus
-              animes favoritos e também ler mangás online, isso mesmo, tudo na
-              nossa plataforma. Aqui, você pode registrar uma conta de usuário
-              para acessar a coleção de Animes e Mangás e aproveitá-las de forma
+              O aniCloud é o melhor site onde você pode assistir seus animes
+              favoritos e também ler mangás online, isso mesmo, tudo na nossa
+              plataforma. Aqui, você pode registrar uma conta de usuário para
+              acessar a coleção de Animes e Mangás e aproveitá-las de forma
               totalmente gratuita.
             </p>
           </div>
@@ -55,7 +56,7 @@ const Home = () => {
                   <FaGithub size="3rem" />
                 </a>
                 <a href="">
-                  <FaLinkedin  size="3rem"/>
+                  <FaLinkedin size="3rem" />
                 </a>
               </div>
             </div>
@@ -67,7 +68,7 @@ const Home = () => {
                   <FaGithub size="3rem" />
                 </a>
                 <a href="">
-                  <FaLinkedin  size="3rem"/>
+                  <FaLinkedin size="3rem" />
                 </a>
               </div>
             </div>
@@ -79,7 +80,7 @@ const Home = () => {
                   <FaGithub size="3rem" />
                 </a>
                 <a href="">
-                  <FaLinkedin  size="3rem"/>
+                  <FaLinkedin size="3rem" />
                 </a>
               </div>
             </div>

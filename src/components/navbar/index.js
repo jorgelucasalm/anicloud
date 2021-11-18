@@ -1,9 +1,14 @@
+import React, { useContext } from "react";
+import { Context } from "../../Context/Authenticate";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 
 const Navbar = () => {
   const list = useRef(null);
+  const { authenticate, authenticateLogin } = useContext(Context);
+  const user = JSON.parse(localStorage.getItem("data"));
+  console.log(user);
 
   const onClick = () => {
     const span = list.current; // corresponding DOM node
@@ -27,12 +32,30 @@ const Navbar = () => {
           <Link to="/noticias">
             <li>Notícias</li>
           </Link>
+
+          {/* Caso esteja logado o menu hamburguer deve mostrar apenas o valor Sair */}
+          {authenticate ? (
+            <li style={{ cursor: "pointer" }} onClick={authenticateLogin}>
+              Sair
+            </li>
+          ) : (
           <Link to="/login">
             <li className="hidden">Entrar</li>
           </Link>
+          )}
+
         </ul>
         <span>
-          <Link to="/login">Entrar</Link>
+          {authenticate ? (
+            <>
+              <span style={{ marginRight: "2rem" }}>Olá, {user.name}</span>
+              <span style={{ cursor: "pointer" }} onClick={authenticateLogin}>
+                Sair
+              </span>
+            </>
+          ) : (
+            <Link to="/login">Entrar</Link>
+          )}
         </span>
         <button onClick={onClick}>
           <span id="hamburguer"></span>

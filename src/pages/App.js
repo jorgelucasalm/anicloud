@@ -1,9 +1,12 @@
-import './App.css';
-import Routes from '../router';
+import "./App.css";
+import Routes from "../router";
+import { Authenticate } from "../Context/Authenticate";
 
 function App() {
   return (
-    <Routes />
+    <Authenticate >
+      <Routes />
+    </Authenticate>
   );
 }
 

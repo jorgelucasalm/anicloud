@@ -30,7 +30,7 @@ const Home = () => {
 
         <div className="home-content">
           <div className="image-content i-fs">
-            <img src={Image} alt="" />
+            <img src={Logo} alt="" />
           </div>
           <div className="text-content">
             <h2>O que é Anime?</h2>

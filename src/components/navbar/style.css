@@ -30,7 +30,20 @@ nav a{
 }
 
 .navbar-list li {
-  margin: 0 2rem;
+  padding: 0 2rem;
+}
+
+.logout,
+.navbar-list + span a{
+  cursor: pointer;
+  transition: .2s ease-out;
+}
+
+.logout:hover,
+.navbar-list + span a:hover,
+.navbar-list li:hover {
+  border-radius: 4px;
+  color: wheat;
 }
 
 nav button {
@@ -104,5 +117,21 @@ nav button {
     height: 3px;
     background-color: #c1c1c1;
     margin-top: 7px;
+    transition: .3s;
+    position: relative;
   }
+
+  #hamburguer.active{
+    border-top: #000;
+  }
+
+  #hamburguer.active::before {
+    transform: rotate(135deg);
+  }
+
+  #hamburguer.active::after {
+    transform: rotate(-135deg);
+    top: -9px;
+  }
+
 }

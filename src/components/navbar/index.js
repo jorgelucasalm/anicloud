@@ -7,6 +7,7 @@ import { useHistory } from "react-router-dom";
 
 const Navbar = () => {
   const list = useRef(null);
+  const button = useRef(null);
   const { authenticate, authenticateLogin } = useContext(Context);
   const user = JSON.parse(localStorage.getItem("data"));
   
@@ -14,8 +15,12 @@ const Navbar = () => {
 
   const onClick = () => {
     const span = list.current; // corresponding DOM node
+    const btn = button.current; // corresponding DOM node
     var css = span.className === "navbar-list active" ? "none" : "active";
+    var cssBtn = btn.className === "active" ? "" : "active";
     span.className = "navbar-list " + css;
+    btn.className = cssBtn;
+
   };
 
   const logout = () => {
@@ -57,8 +62,8 @@ const Navbar = () => {
         <span>
           {authenticate ? (
             <>
-              <span style={{ marginRight: "2rem" }}>Olá, {user.name}</span>
-              <span style={{ cursor: "pointer" }} onClick={logout}>
+              <span style={{ marginRight: "2rem", cursor: "pointer" }}>Olá, {user.name}</span>
+              <span className="logout" style={{  }} onClick={logout}>
                 Sair
               </span>
             </>
@@ -67,7 +72,7 @@ const Navbar = () => {
           )}
         </span>
         <button onClick={onClick}>
-          <span id="hamburguer"></span>
+          <span id="hamburguer" ref={button}></span>
         </button>
       </div>
     </nav>

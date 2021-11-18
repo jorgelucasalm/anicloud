@@ -81,3 +81,32 @@
   text-decoration: none;
   color: white;
 }
+
+@media(max-width: 750px){
+  .home-content{
+    flex-direction: column-reverse;
+  }
+
+  .home-content div {
+    text-align: center;
+    font-size: 1rem;
+    width: 75%;
+  }
+
+  .home-content div p {
+    text-align: justify;
+  }
+  
+  .home-content + .home-content{
+    flex-direction: column;
+  }
+
+  .text-content{
+    margin: 0 auto;
+  }
+  .image-content,
+  .image-content img{
+    width: 100%;
+    margin: 0 auto;
+  }
+}

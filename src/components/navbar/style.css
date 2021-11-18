@@ -131,7 +131,7 @@ nav button {
 
   #hamburguer.active::after {
     transform: rotate(-135deg);
-    top: -9px;
+    top: -9.7px;
   }
 
 }

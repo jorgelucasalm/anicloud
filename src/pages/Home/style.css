@@ -11,16 +11,20 @@
 }
 
 .home-content{
-  padding: 2rem 1rem;
+  padding: 3rem 4rem 0;
   margin: 0 auto;
   display: flex;
   max-width: 1440px;
 }
 
-.home-content h2 {
-  
-  letter-spacing: .1rem;
+.text-content p{
+  font-family: 'Open Sans';
 }
+
+/*
+.home-content h2 {
+  letter-spacing: .1rem;
+}*/
 
 .home-content div{
   width: 50%;
@@ -40,6 +44,7 @@
 }
 
 .home .image-content img{
+  border-radius: 4px;
   width: 100%;
   max-width: 550px;
 }
@@ -113,5 +118,10 @@
   .image-content img{
     width: 100%;
     margin: 0 auto;
+  }
+
+  .i-fs {
+    padding: 0;
+    margin-bottom: 2rem;
   }
 }

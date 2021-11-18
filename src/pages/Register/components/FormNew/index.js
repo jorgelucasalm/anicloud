@@ -6,14 +6,14 @@ import { useForm } from "react-hook-form";
 import Button from "../Button";
 import { yupResolver } from "@hookform/resolvers/yup";
 import schema from "./Validation";
-import img2 from "./anime.png";
+import img2 from "./img/anime2.jpg";
 import Div from "./style";
 import { useHistory } from "react-router-dom";
 
 const FormNew = () => {
-    const { authenticateLogin } = useContext(Context);
+  const { createRegister } = useContext(Context);
   const history = useHistory();
-  const user = JSON.parse(localStorage.getItem("data"));
+
   const {
     register,
     handleSubmit,
@@ -23,19 +23,8 @@ const FormNew = () => {
   });
 
   const onSubmit = (data) => {
-    if (user.email === data.email && data.password === user.password) {
-      authenticateLogin();
-      alert("Login feito com Sucesso!");
-      history.replace("/");
-    }
-    console.log("Form - " + data.email);
-    console.log("Form - " + data.password);
-    console.log("Context - " + user.email);
-    console.log("Context - " + user.password);
-  };
-
-  const esqueceuSenha = () => {
-    alert("Entre em contato com o Email do Site");
+    createRegister(data);
+    history.replace("/login");
   };
 
   return (
@@ -43,10 +32,22 @@ const FormNew = () => {
       <img src={img2} alt="" />
       <Form onSubmit={handleSubmit(onSubmit)}>
         <Field.Text
+          placeholder="Usuário"
+          label="Cadastro"
+          name="name"
+          autocomplete="on"
+          type="name"
+          register={register}
+          {...register("name")}
+          defaultValue=""
+        />
+        <span>{errors.name?.message}</span>
+        <Field.Text
           placeholder="Email"
-          label="Iniciar Sessão"
+          label=""
           name="email"
           type="email"
+          autocomplete="on"
           register={register}
           {...register("email")}
           defaultValue=""
@@ -57,25 +58,27 @@ const FormNew = () => {
           label=""
           name="password"
           type="password"
+          autocomplete="on"
           register={register}
           {...register("password")}
           defaultValue=""
         />
         <span>{errors.password?.message}</span>
+        <Field.Text
+          placeholder="Confirmar Senha"
+          label=""
+          name="confirmPassword"
+          autocomplete="on"
+          type="password"
+          register={register}
+          {...register("confirmPassword")}
+          defaultValue=""
+        />
+        <span>{errors.confirmPassword?.message}</span>
 
         <Button type="submit" className="button1">
-          Login
+          Cadastrar
         </Button>
-
-        <div className="lowlogin">
-          <a id="link" href="/" onClick={esqueceuSenha} className="link">
-            Esqueceu a senha?
-          </a>
-          <hr />
-          <a id="link1" href="/registro" className="link">
-            Cadastre-se
-          </a>
-        </div>
       </Form>
     </Div>
   );

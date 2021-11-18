@@ -16,12 +16,14 @@
 .pagination {
   display: flex;
   justify-content: center;
+  align-items: center;
   list-style: none;
   margin-bottom: 2rem;
 }
 
 .pagination button {
-  background-color: #084d6e;
+  background-color: #7BA7BC;
+  font-weight: bold;
   cursor: pointer;
   padding: .6rem .8rem;
   font-size: 1rem;

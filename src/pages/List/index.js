@@ -17,6 +17,11 @@ const List = (props) => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
+    
+    //window.scrollTo(0, 0)
+    window.scroll({top: 0, left: 0, behavior: 'smooth' })
+  
     const query = {
       page: {
         limit: LIMIT,

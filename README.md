@@ -1,6 +1,6 @@
 # Projeto Final
 
-Projeto feito em React.
+Projeto final pela Start Latam feito em React.
 
 ---
 ## Ferramentas necessárias
@@ -24,5 +24,5 @@ Projeto feito em React.
 
 Jesper (Ian) Brayner <br>
 [@Joao-Victor-Araujo](https://github.com/Joao-Victor-Araujo) <br>
-[@jorgelucas006](https://github.com/JorgeLucas006) <br>
+[@jorgelucasalm](https://github.com/JorgeLucasalm) <br>
  
